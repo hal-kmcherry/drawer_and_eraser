@@ -1,0 +1,16 @@
+// objective: draw where mouse is and erase when mouse is pressed
+void setup(){
+size(800,600);
+background(#FCC6FF);
+strokeWeight(8);
+}
+
+// this sets up the drawing following mouse and 
+// creates eraser for if mouse is pressed
+void draw(){
+fill (0,0,250);
+line(mouseX,mouseY,pmouseX,pmouseY);
+if(mousePressed){
+background(#FCC6FF);
+}
+}
