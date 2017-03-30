@@ -1,0 +1,243 @@
+/* objective: to create a draw program based on mouse location
+also background will change based on # pressed
+also color of stroke will change based on key
+the color changed to corresponds with letter
+there's lots of code, but it's all pretty repetitive
+so it should be easy to follow
+*/
+
+int w=800; // this is screen width
+int h=600; // this is screen height
+int r=0; // establishes color red
+int g=0; // establishes color green
+int b=0; // establishes color blue
+
+// this sets up the size and background color
+void settings(){
+  size(w,h);
+}
+void setup(){ // establishes variables for background changing 
+  r=252;
+  g=198;
+  b=255;
+  background(r,g,b);
+}
+  
+
+// this function makes my life easier
+void changeColor(){
+  strokeWeight(9);
+line (mouseX,mouseY,pmouseX,pmouseY);
+}
+
+// this sets up all the different commands
+void draw(){
+  // this changes the background color based on # pressed
+
+  // lavander/pink
+ if (keyPressed==true)
+  if (key=='4')
+  {
+  r=252;
+  g=198;
+  b=255;
+  background(r,g,b);
+  }
+  //green
+  if (keyPressed==true)
+  if (key=='2'){
+    r=227;
+    g=255;
+    b=216;
+    background (r,g,b);
+  }
+  // yellow
+   if (keyPressed==true)
+  if (key=='3'){
+    r=254;
+    g=255;
+    b=216;
+    background (r,g,b);
+  }
+  // blue
+   if (keyPressed==true)
+  if (key=='1'){
+  r=216; // variables for background changing 
+  g=255;
+  b=253;
+  background(r,g,b);
+  }
+ 
+
+  // this establishes base color for drawer (blue)
+  strokeWeight(8);
+  stroke(#4D86E0); 
+  line(mouseX,mouseY,pmouseX,pmouseY);
+
+//if the mouse is pressed, the color should erase
+  if(mousePressed){
+    stroke(r,g,b);
+    strokeWeight(20);
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+//if x is pressed, it will clear the screen
+  if (keyPressed ==true)
+  if (key== 'x'){
+    background(r,g,b);
+  }
+
+  // this says if a is pressed color will change to amber
+  if (keyPressed==true)
+  if (key == 'a'){
+    strokeWeight(9);
+    stroke(#EDD262);
+    line(mouseX,mouseY,pmouseX,pmouseY);
+
+  }
+  // changes color to blue
+  if (keyPressed==true)
+  if (key == 'b'){
+    strokeWeight(9);
+    stroke(#4D86E0);
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+// cyan
+  if (keyPressed==true)
+  if (key=='c'){
+  stroke (#2DEFF7);
+  changeColor();
+  }
+  if (keyPressed==true)
+  if (key=='d'){
+  stroke (#D6FDFF);
+  changeColor();
+  }
+  // electric green
+    if (keyPressed==true)
+  if (key=='e'){
+  stroke (#DEFF29);
+  changeColor();
+  }
+  //flamingo
+    if (keyPressed==true)
+    if (key=='f'){
+    stroke (#FA4CC6);
+    changeColor();
+  }
+  // this says if g is pressed stroke will turn green
+  if (keyPressed==true)
+  if (key == 'g'){
+    strokeWeight(9);
+    stroke(#DEFFD1);
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+  // hot pink
+    if (keyPressed==true)
+  if (key=='h'){
+  stroke (#FF00B3);
+  changeColor();
+  }
+  // indigo 
+    if (keyPressed==true)
+  if (key=='i'){
+  stroke (#500CF2);
+  changeColor();
+  }
+  // jasmine green
+    if (keyPressed==true)
+  if (key=='j'){
+  stroke (#71B77E);
+  changeColor();
+  }
+  // key lime
+    if (keyPressed==true)
+  if (key=='k'){
+  stroke (#90FF6C);
+  changeColor();
+  }
+  // lavander
+    if (keyPressed==true)
+  if (key=='l'){
+  stroke (#F3E8FF);
+  changeColor();
+  }
+  //mango
+    if (keyPressed==true)
+  if (key=='m'){
+  stroke (#FF954D);
+  changeColor();
+  }
+ // navy
+    if (keyPressed==true)
+  if (key=='n'){
+  stroke (#090071);
+  changeColor();
+  }
+  // orange
+    if (keyPressed==true)
+  if (key=='o'){
+  stroke (#FF7F00);
+  changeColor();
+  }
+  // this says if p is pressed stroke will be pink
+    if (keyPressed==true)
+  if (key == 'p'){
+    strokeWeight(9);
+    stroke(#D8046B);
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  } 
+    // queen of hearts (red)
+    if (keyPressed==true)
+  if (key=='q'){
+  stroke (#F7253E);
+  changeColor();
+  }
+  // red
+    if (keyPressed==true)
+  if (key=='r'){
+  stroke (#F7253E);
+  changeColor();
+  }
+   // scarlet
+    if (keyPressed==true)
+  if (key=='s'){
+  stroke (#FF5921);
+  changeColor();
+  }
+  // turqiouse
+    if (keyPressed==true)
+  if (key=='t'){
+  stroke (#00FAE7);
+  changeColor();
+  }
+    // UFO green
+    if (keyPressed==true)
+  if (key=='u'){
+  stroke (#3CD070);
+  changeColor();
+  }
+    // vanilla
+    if (keyPressed==true)
+  if (key=='v'){
+  stroke (#FCFCE5);
+  changeColor();
+  }
+    // white
+    if (keyPressed==true)
+  if (key=='w'){
+  stroke (255);
+  changeColor();
+  }
+    // yellow
+    if (keyPressed==true)
+  if (key=='y'){
+  stroke (#F2EC27);
+  changeColor();
+  }
+    // "zomp" which is a real color
+    if (keyPressed==true)
+  if (key=='z'){
+  stroke (#0014A8);
+  changeColor();
+  }
+}
