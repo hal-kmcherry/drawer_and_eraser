@@ -1,0 +1,106 @@
+int h=800;
+int r=0;
+int b=0;
+int g=0;
+
+void settings(){
+ size(w,h);
+}
+
+void setup(){
+  background (255);
+}
+
+
+void draw(){
+  // corner square
+  rect (0,h-90,90,90);
+ { fill (r,b,g);
+  noStroke();}
+ ellipse(45,h-45,8,8);
+//red square
+fill(255,0,0);
+rect(90,h-90,150,90);
+//establishing button
+if (mouseX>90)
+if (mouseX<240)
+if (mouseY>h-90)
+if (mousePressed){
+  r=255;
+  b=0;
+  g=0;
+  strokeWeight(9);
+  stroke(r,b,g);
+  line(mouseX,mouseY,pmouseX,pmouseY);
+}
+// blue square
+fill (0,0,255);
+rect(240, h-90, 150,90);
+if (mouseX>240 && mouseX<390)
+if (mouseY>h-90 && mousePressed){
+  r=0;
+  b=0;
+  g=255;
+  strokeWeight(9);
+  stroke(r,b,g);
+  line(mouseX,mouseY,pmouseX,pmouseY);
+}
+// green square
+fill (0,255,0);
+rect(390, h-90,150,90);
+
+if (mouseX>390 && mouseX<540)
+if (mouseY>h-90 && mousePressed){
+  r=0;
+  b=255;
+  g=0;
+  strokeWeight(9);
+  stroke(r,b,g);
+  line(mouseX,mouseY,pmouseX,pmouseY);
+}
+// black
+fill(0);
+rect(540,h-90,150,90);
+if (mouseX>540 && mouseX<690)
+if (mouseY>h-90 && mousePressed){
+  r=0;
+  b=0;
+  g=0;
+  strokeWeight(9);
+  stroke(r,b,g);
+  line(mouseX,mouseY,pmouseX,pmouseY);
+}
+// white
+fill(255);
+rect(690,h-90,150,90);
+if (mouseX>690 && mouseX<840)
+if (mouseY>h-90 && mousePressed){
+  r=255;
+  b=255;
+  g=255;
+  strokeWeight(9);
+  stroke(r,b,g);
+  line(mouseX,mouseY,pmouseX,pmouseY);
+}
+//color wheel
+rect(840,h-90,160,90);
+//change size
+rect(0,h-240,90,150);
+ellipse(45,h-125,5,5);
+// square for changing shape
+rect(0,h-440,90,200);
+// square for text
+rect(0,h-530,90,90);
+// square for clear screen
+rect(0,h-620,90,90);
+// erasing
+rect(0,h-710,90,90);
+// another thing that works 
+rect(0,h-800,90,90);
+ if(mousePressed){
+   strokeWeight(8);
+  stroke(r,b,g); 
+  line(mouseX,mouseY,pmouseX,pmouseY);
+ }
+
+}
